@@ -1,0 +1,40 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/winnings-plugin",
+    "description": "Funseco winnings plugin: random finisher rewards on every Nth map (XAseco nouse.winning2)",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Winnings\\": "src/"
+        }
+    },
+    "require-dev": {
+        "funseco/betting-plugin": "@dev",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Winnings\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "winnings",
+            "name": "Winnings",
+            "description": "winnings plugin: random finisher rewards on every Nth map (XAseco nouse.winning2)",
+            "provider": "Funseco\\Winnings\\WinningsServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
